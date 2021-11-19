@@ -29,7 +29,7 @@ if (keyPressed){ //one key at a time
       spade.setYspeed(0);
       spade.setCenterX((int)(Math.random()*400));
       spade.setCenterY((int)(Math.random()*400));
-      spade.setPointDirection((int)(Math.random()*360))h;
+      spade.setPointDirection((int)(Math.random()*360));
     }
 }
     
