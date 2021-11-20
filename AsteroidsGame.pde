@@ -24,7 +24,7 @@ if (keyPressed){ //one key at a time
      spade.accelerate(0.3); 
     }
     
-    if(key == 'h'){
+    if(key == 'h' || key=='H'){
       spade.setXspeed(0);
       spade.setYspeed(0);
       spade.setCenterX((int)(Math.random()*400));
