@@ -15,24 +15,28 @@ public void draw() {
     sue[i].show();
   }
 
-if (keyPressed){ //one key at a time
-    if (key == 'a' || key == 'A') {
+  if (keyPressed) { //one key at a time
+    if (keyCode == LEFT) {
       spade.turn(-10);
     }
-    
-    if(key == 'w' || key=='W'){
-     spade.accelerate(0.3); 
+
+    if (keyCode == RIGHT) {
+      spade.turn(10);
     }
-    
-    if(key == 'h' || key=='H'){
+
+    if (key == 'a' || key=='A') {
+      spade.accelerate(0.3);
+    }
+
+    if (key == 'h' || key == 'H') {
       spade.setXspeed(0);
       spade.setYspeed(0);
       spade.setCenterX((int)(Math.random()*400));
       spade.setCenterY((int)(Math.random()*400));
       spade.setPointDirection((int)(Math.random()*360));
     }
-}
-    
-    spade.move();
-    spade.show();
   }
+
+  spade.move();
+  spade.show();
+}
