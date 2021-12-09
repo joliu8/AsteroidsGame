@@ -1,5 +1,8 @@
 Star[] sue;
 Spaceship spade;
+Asteroid ash;
+ArrayList <Asteroid> ashes = new ArrayList <Asteroid>();
+
 public void setup() {
   size(400, 400);
   background(0);
@@ -8,11 +11,24 @@ public void setup() {
     sue[i] = new Star();
   }
   spade = new Spaceship();
+
+  for (int i = 0; i<10; i++) {
+    ashes.add(new Asteroid());
+  }
 }
 public void draw() { 
   background(0);
   for (int i =0; i<sue.length; i++) {
     sue[i].show();
+  }
+
+  for (int i = 0; i< ashes.size(); i++) {
+    ashes.get(i).show();
+    ashes.get(i).move();
+    float d = dist((float)spade.getXCenter(), (float)spade.getYCenter(), (float)ashes.get(i).getXCenter(), (float)ashes.get(i).getYCenter()); 
+    if (d < 10){
+      ashes.remove(i);
+    }
   }
 
   if (keyPressed) { //one key at a time
