@@ -17,23 +17,25 @@ class Asteroid extends Floater
     yCorners[4] = 8;
     xCorners[5] = -5;
     yCorners[5] = 0;
-    rotSpeed = 3.0;;
+    rotSpeed = 3.0;
     myCenterX = (int)(Math.random()*400);
     myCenterY = (int)(Math.random()*400);
-    myXspeed= 0;
-    myYspeed = 0;
-    myPointDirection = 0;
+    myXspeed = (Math.random()-0.3);
+    myYspeed = (Math.random()-0.3);
+    myPointDirection = (int)(Math.random()*360);
     myColor = color(256, 256, 256);
     stroke(myColor);
-    //xCorners = new int [] {-11,7,13,6,-11,-5};
-    //yCorners = new int [] {-8,-8,0,10,8,0};
-    //for (int i = 0; i< xCorners.length; i++){
-    //  xCorners[i] = xCorners
-    //}
   }
 
+  public double getXCenter() {
+    return myCenterX;
+  }
+
+  public double getYCenter() {
+    return myCenterY;
+  }
   public void move() {
-    turn(rotSpeed);
     super.move();
+    turn(rotSpeed);
   }
 }
