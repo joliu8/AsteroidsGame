@@ -10,10 +10,10 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto
+border: 5px solid white;
 }
 
 header {
-	border: 5px solid white;
 }
 
 footer {
