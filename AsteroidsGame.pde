@@ -26,7 +26,7 @@ public void draw() {
     ashes.get(i).show();
     ashes.get(i).move();
     float d = dist((float)spade.getXCenter(), (float)spade.getYCenter(), (float)ashes.get(i).getXCenter(), (float)ashes.get(i).getYCenter()); 
-    if (d < 10){
+    if (d < 20){
       ashes.remove(i);
     }
   }
